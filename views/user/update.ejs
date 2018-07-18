@@ -1,0 +1,40 @@
+<div class="container" style="min-height: 600px; height: auto;">
+	<h2>Update Profile Page</h2>
+	<form action="/user/update" method="post">
+		
+	<table class="table table-hover table-stripped table-bordered">
+		<tr>
+			<td>Full Name</td>
+			<td><input type="text" name="full_name" class="form-control" value="<%= userdata.full_name %>" /></td>
+		</tr>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" class="form-control" value="<%= userdata.username %>" disabled="disabled"/></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>Male <input <% if(userdata.gender=="male"){ %> checked='checked'  <% } %> type="radio" value="male" name="gender" />Female <input type="radio" <% if(userdata.gender=="female"){ %> checked='checked'  <% } %> value="female" name="gender" /></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><textarea class="form-control" name="address"><%= userdata.address %></textarea></td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td><select class="form-control" name="city">
+					<option>Select</option>
+					<option <% if(userdata.city=="Indore"){ %> selected='selected' <%} %>>Indore</option>
+					<option <% if(userdata.city=="Mumbai"){ %> selected='selected' <%} %>>Mumbai</option>
+					<option <% if(userdata.city=="Pune"){ %> selected='selected' <%} %>>Pune</option>
+					<option <% if(userdata.city=="Bhopal"){ %> selected='selected' <%} %>>Bhopal</option>
+			</select></td>
+		</tr>
+		
+		<!-- <tr>
+			<td>Curent Image</td>
+			<td><img src="/image/avatar.png" height="80" width="80" /></td>
+		</tr> -->
+	</table>
+	<input type="submit" class="btn btn-primary" value="Update">
+	</form>
+</div>

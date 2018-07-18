@@ -1,0 +1,27 @@
+<div class="container" style="min-height: 600px; height: auto;">
+	<h2>User Profile Page</h2>
+	<form action="/user/upload" method="post" enctype="multipart/form-data">
+		
+	<table class="table table-hover table-stripped table-bordered">
+		
+		
+		<tr>
+			<td>Image</td>
+			<% if(userdata.image==""){ %>
+						<td><img src="/image/avatar.png" height="80" width="80" /></td>
+
+					<% }else{ %>
+						<td><img src="/user_img/<%= userdata.image %>" height="80" width="80" /></td>
+
+				<% } %>
+		</tr>
+		<tr>
+			<td>Select New Image</td>
+			<td><input type="file" name="image" /></td>
+		</tr>
+
+	</table>
+	<input type="submit" value="Upload" class="btn btn-primary">
+	</form>
+	
+</div>

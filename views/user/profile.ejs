@@ -1,0 +1,38 @@
+<div class="container" style="min-height: 600px; height: auto;">
+	<h2>User Profile Page</h2>
+	<table class="table table-hover table-stripped table-bordered">
+		<tr>
+			<td>Full Name</td>
+			<td><%= userdata.full_name %></td>
+		</tr>
+		<tr>
+			<td>Username</td>
+			<td><%= userdata.username %></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td><%= userdata.gender %></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><%= userdata.address %></td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td><%= userdata.city %></td>
+		</tr>
+		
+		<tr>
+			<td>Image</td>
+			<% if(userdata.image==""){ %>
+			<td><img src="/image/avatar.png" height="80" width="80" /></td>
+
+		<% }else{ %>
+			<td><img src="/user_img/<%= userdata.image %>" height="80" width="80" /></td>
+
+	<% } %>
+		</tr>
+	</table>
+	<a href="/user/update">Update Profile</a>
+	<a href="/user/upload">Upload Your Profile Pic</a>
+</div>

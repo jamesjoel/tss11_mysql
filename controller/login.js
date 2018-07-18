@@ -10,7 +10,7 @@ routes.get("/", function(req, res){
 
 
 routes.post("/", function(req, res){
-	// console.log(req.body);
+
 	var u = req.body.username;
 	var p = sha1(req.body.password);
 
