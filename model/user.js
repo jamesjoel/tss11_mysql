@@ -10,6 +10,20 @@ module.exports.insert=function(obj, cb){
 
 module.exports.findWhere=function(obj, cb){
 	con.connect(function(err){
+
+		// SELECT * FROM user WHERE user='"+u+" AND password = '"+p+"'
+
+
+
+
+
+
+
+
+
+
+
+
 		var que = "SELECT * FROM user WHERE ";
 		var counter=1;
 		for(var k in obj){
